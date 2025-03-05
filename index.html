@@ -14,23 +14,54 @@
       font-family: 'Poppins', sans-serif;
       background-color: #0d1117;
       color: #ffffff;
+      line-height: 1.6;
+    }
+    nav {
+      background-color: #1f2937;
+      padding: 10px;
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul ul {
+      display: none;
+      position: absolute;
+      background-color: #374151;
+      top: 40px;
+      left: 0;
+      padding: 10px 0;
+      border-radius: 5px;
+    }
+    nav ul ul li {
+      width: 150px;
+    }
+    nav ul ul li a {
+      padding: 10px;
+    }
+    header, footer {
+      padding: 40px 20px;
       text-align: center;
-      padding: 20px;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+    h1, h2 {
+      margin-bottom: 20px;
     }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      max-width: 600px;
-    }
-    a {
+    a.button {
       display: inline-block;
       padding: 10px 20px;
       background-color: #2563eb;
@@ -39,23 +70,50 @@
       border-radius: 5px;
       transition: background-color 0.3s;
     }
-    a:hover {
+    a.button:hover {
       background-color: #1d4ed8;
     }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
     footer {
-      position: absolute;
-      bottom: 20px;
+      padding: 20px;
       font-size: 0.9rem;
       color: #888;
     }
   </style>
 </head>
 <body>
-  <div>
+  <nav>
+    <ul>
+      <li><a href="#software">Software</a>
+        <ul>
+          <li><a href="#">Mobile Apps</a></li>
+          <li><a href="#">Web Development</a></li>
+        </ul>
+      </li>
+      <li><a href="#hardware">Hardware</a>
+        <ul>
+          <li><a href="#">IoT Devices</a></li>
+          <li><a href="#">Circuit Design</a></li>
+        </ul>
+      </li>
+      <li><a href="#ideas">Ideas</a>
+        <ul>
+          <li><a href="#">Future Projects</a></li>
+          <li><a href="#">Concepts</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <header>
     <h1>Hello, I'm Sayed Omar</h1>
-    <p>Mobile App Designer & Web Developer passionate about creating innovative mobile applications and modern web experiences.<br>Stay tuned for my upcoming projects!</p>
-    <a href="mailto:sayed.omar1974">Contact Me</a>
-  </div>
+    <p>Mobile App Designer & Web Developer passionate about creating innovative mobile applications and modern web experiences.</p>
+    <a class="button" href="mailto:youremail@example.com">Contact Me</a>
+  </header>
+
   <footer>
     © 2024 Sayed Omar. All Rights Reserved.
   </footer>
